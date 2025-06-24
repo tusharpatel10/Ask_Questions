@@ -21,7 +21,7 @@ a {
   padding: 0;
 }
 
-.questionList a {
+.questionList a, .questionTitle {
   font-size: 18px;
   text-decoration: none;
   color: #1c7194 !important;
