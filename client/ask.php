@@ -17,7 +17,7 @@
         </div>
 
         <div class="col-6 offset-sm-3">
-            <button type="submit" class="btn btn-primary" name="submit">Submit</button>
+            <button type="submit" class="btn btn-primary" name="ask">Ask a Question</button>
         </div>
 
     </form>

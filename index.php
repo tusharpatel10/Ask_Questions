@@ -13,7 +13,7 @@
     session_start();
     include('/Php/www/Discuss_Project/client/header.php');
 
-    if (isset($_GET['signup']) && !$_SESSION['user']['username']) {
+    if (isset($_GET['signup']) && !$_SESSION) {
         include('./client/signup.php');
     } elseif (isset($_GET['login']) && !$_SESSION) {
         include('./client/login.php');
