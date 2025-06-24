@@ -10,12 +10,23 @@
                     <a class="nav-link active" href="./" aria-current="page">Home
                         <span class="visually-hidden">(current)</span></a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="?login=true">Login</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="?signup=true">Singup</a>
-                </li>
+                <?php
+                if ($_SESSION['user']['username']) { ?>
+                    <li class="nav-item">
+                        <a class="nav-link" href="?logout=true">Logout</a>
+                    </li>
+                <?php }
+                ?>
+                <?php
+                if (!$_SESSION['user']['username']) { ?>
+                    <li class="nav-item">
+                        <a class="nav-link" href="?login=true">Login</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="?signup=true">Singup</a>
+                    </li>
+                <?php }
+                ?>
                 <li class="nav-item">
                     <a class="nav-link" href="#">Category</a>
                 </li>

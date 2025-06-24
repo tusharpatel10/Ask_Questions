@@ -10,11 +10,12 @@
 
 <body>
     <?php
+    session_start();
     include('/Php/www/Discuss_Project/client/header.php');
 
-    if (isset($_GET['signup'])) {
+    if (isset($_GET['signup']) && !$_SESSION['user']['username']) {
         include('./client/signup.php');
-    }elseif (isset($_GET['login'])) {
+    } elseif (isset($_GET['login']) && !$_SESSION['user']['username']) {
         include('./client/login.php');
     }
 

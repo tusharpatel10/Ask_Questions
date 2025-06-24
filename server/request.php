@@ -17,8 +17,8 @@ if (isset($_POST['signup'])) {
     $result = $user->execute();
 
     if ($result) {
-        echo "User are Registered Successfully";
         $_SESSION["user"] = ["username" => $username, "email" => $email];
+        header("location: /Discuss_Project");
     } else {
         echo "User Not Registered";
     }
