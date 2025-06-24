@@ -9,7 +9,18 @@
 </head>
 
 <body>
-    <?php include('/Php/www/Discuss_Project/client/header.php'); ?>
+    <?php
+    include('/Php/www/Discuss_Project/client/header.php');
+
+    if (isset($_GET['signup'])) {
+        include('./client/signup.php');
+    }elseif (isset($_GET['login'])) {
+        include('./client/login.php');
+    }
+
+    ?>
+
+
 
 
 </body>
