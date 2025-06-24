@@ -11,14 +11,14 @@
                         <span class="visually-hidden">(current)</span></a>
                 </li>
                 <?php
-                if ($_SESSION['user']['username']) { ?>
+                if ($_SESSION) { ?>
                     <li class="nav-item">
-                        <a class="nav-link" href="?logout=true">Logout</a>
+                        <a class="nav-link" href="./server/request.php?logout=true">Logout</a>
                     </li>
                 <?php }
                 ?>
                 <?php
-                if (!$_SESSION['user']['username']) { ?>
+                if (!$_SESSION) { ?>
                     <li class="nav-item">
                         <a class="nav-link" href="?login=true">Login</a>
                     </li>

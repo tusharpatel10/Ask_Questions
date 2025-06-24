@@ -18,7 +18,7 @@
             <input type="text" name="address" id="address" class="form-control" placeholder="" aria-describedby="helpId" />
         </div>
         <div class="col-6 offset-sm-3">
-            <button class="btn btn-primary" name="signup">Signup</button>
+            <button type="submit" class="btn btn-primary" name="signup">Signup</button>
         </div>
 
     </form>
