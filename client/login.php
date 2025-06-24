@@ -12,7 +12,7 @@
         </div>
 
         <div class="col-6 offset-sm-3">
-            <button class="btn btn-primary">Login</button>
+            <button class="btn btn-primary" name="login">Login</button>
         </div>
 
     </form>
