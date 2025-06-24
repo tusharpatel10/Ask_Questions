@@ -9,4 +9,3 @@ if ($conn->connect_error) {
     die("Not Connected with DB" . $conn->connect_error);
 }
 
-echo "Database Connection Successfully";

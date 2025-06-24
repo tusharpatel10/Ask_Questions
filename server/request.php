@@ -1,11 +1,25 @@
 <?php
 
+session_start();
+
 include("../common/db.php");
 
 if (isset($_POST['signup'])) {
-    echo "User name is " . $_POST['username'] . "<br>";
-    echo "User name is " . $_POST['email'] . "<br>";
-    echo "User name is " . $_POST['password'] . "<br>";
-    echo "User name is " . $_POST['address'] . "<br>";
+    $username = $_POST['username'];
+    $email = $_POST['email'];
+    $password = $_POST['password'];
+    $address = $_POST['address'];
 
+    $user = $conn->prepare("Insert Into `users`
+    (`id`,`username`,`email`,`password`,`address`) VALUES
+    (Null, '$username','$email','$password','$address');");
+
+    $result = $user->execute();
+
+    if ($result) {
+        echo "User are Registered Successfully";
+        $_SESSION["user"] = ["username" => $username, "email" => $email];
+    } else {
+        echo "User Not Registered";
+    }
 }
