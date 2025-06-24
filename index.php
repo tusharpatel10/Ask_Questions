@@ -19,6 +19,8 @@
         include('./client/login.php');
     } elseif (isset($_GET['ask'])) {
         include('./client/ask.php');
+    } else {
+        include("./client/question.php");
     }
 
     ?>
