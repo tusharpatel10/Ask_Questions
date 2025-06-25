@@ -25,6 +25,11 @@
     } elseif (isset($_GET['c-id'])) {
         $cid = $_GET['c-id'];
         include('./client/question.php');
+    } elseif (isset($_GET['u-id'])) {
+        $uid = $_GET['u-id'];
+        include('./client/question.php');
+    } elseif (isset($_GET['Latest'])) {
+        include('./client/question.php');
     } else {
         include("./client/question.php");
     }

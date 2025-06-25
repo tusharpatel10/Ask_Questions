@@ -6,6 +6,10 @@
             include("/Php/www/Discuss_Project/common/db.php");
             if (isset($_GET['c-id'])) {
                 $query = "select * from questions where category_id= '$cid'";
+            } elseif (isset($_GET['u-id'])) {
+                $query = "select * from questions where user_id= '$uid'";
+            } elseif (isset($_GET['Latest'])) {
+                $query = "select * from questions order by id desc";
             } else {
                 $query = "select * from questions";
             }
