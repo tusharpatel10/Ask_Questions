@@ -30,6 +30,9 @@
         include('./client/question.php');
     } elseif (isset($_GET['Latest'])) {
         include('./client/question.php');
+    } elseif (isset($_GET['search'])) {
+        $search = $_GET['search'];
+        include('./client/question.php');
     } else {
         include("./client/question.php");
     }

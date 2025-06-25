@@ -40,6 +40,10 @@
                     <a class="nav-link" href="?Latest=true">Latest Question</a>
                 </li>
             </ul>
+            <form class="d-flex" role="search">
+                <input class="form-control me-2" name="search" type="search" placeholder="Search Questions" />
+                <button class="btn btn-outline-success" type="submit">Search</button>
+            </form>
         </div>
     </div>
 </nav>
