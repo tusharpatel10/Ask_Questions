@@ -1,7 +1,7 @@
 <nav
     class="navbar navbar-expand-sm navbar-light bg-light">
     <div class="container">
-        <a class="navbar-brand" href="#">
+        <a class="navbar-brand" href="./">
             <img src="/discuss_project/public/logo.png" alt="#img" width="180" srcset="">
         </a>
         <div class="collapse navbar-collapse" id="collapsibleNavId">
@@ -13,7 +13,7 @@
                 <?php
                 if ($_SESSION) { ?>
                     <li class="nav-item">
-                        <a class="nav-link" href="./server/request.php?logout=true">Logout</a>
+                        <a class="nav-link" href="./server/request.php?logout=true">Logout (<b><?php echo ucfirst($_SESSION['user']['username']) ?></b>)</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="?ask=true">Ask a Questions</a>
@@ -34,16 +34,13 @@
                 <?php }
                 ?>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Category</a>
-                </li>
-                <li class="nav-item">
                     <a class="nav-link" href="?Latest=true">Latest Question</a>
                 </li>
             </ul>
-            <form class="d-flex" role="search">
-                <input class="form-control me-2" name="search" type="search" placeholder="Search Questions" />
-                <button class="btn btn-outline-success" type="submit">Search</button>
-            </form>
         </div>
+        <form class="d-flex" role="search">
+            <input class="form-control me-2" name="search" type="search" placeholder="Search Questions" />
+            <button class="btn btn-outline-success" type="submit">Search</button>
+        </form>
     </div>
 </nav>
