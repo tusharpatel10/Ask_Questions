@@ -20,8 +20,9 @@
                 $title = $row['title'];
                 $id = $row['id'];
                 echo "<div class='row questionList'>
-        <h4><a href='?q-id=$id'>$title</a></h4>
-        </div>";
+        <h4 class='question'><a href='?q-id=$id'>$title</a>";
+                echo $id ? "<a href='./server/request.php?delete=$id'>Delete</a>" : NULL;
+                echo "</h4></div>";
             }
             ?>
         </div>
