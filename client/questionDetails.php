@@ -9,6 +9,7 @@
 
         echo "<h3 class='margin-bottom-15 questionTitle'>" . $row['title'] . "</h3>
     <p>" . $row['description'] . "</p>";
+        include("./client/answers.php");
         ?>
         <form action="./server/request.php" method="post">
             <input type="hidden" name="question_id" value="<?php echo $qid ?>">
