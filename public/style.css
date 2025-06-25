@@ -7,7 +7,7 @@ a {
 }
 
 .margin-bottom-15 {
-  margin-bottom: 15px;
+  margin-bottom: 10px;
 }
 
 .questionList {
@@ -22,7 +22,7 @@ a {
 }
 
 .questionList a, .questionTitle {
-  font-size: 18px;
+  font-size: 20px;
   text-decoration: none;
   color: #1c7194 !important;
 }
