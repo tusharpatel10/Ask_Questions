@@ -1,4 +1,4 @@
-<div class="container">
+<div class="container main">
     <div class="row">
         <h1 class="heading">Question</h1>
         <div class="col-8">
@@ -9,7 +9,7 @@
             $row = $result->fetch_assoc();
             $cid = $row['category_id'];
             echo "<h3 class='margin-bottom-15 questionTitle'>" . $row['title'] . "</h3>
-    <p>" . $row['description'] . "</p>";
+    <p class='whiteText'>" . $row['description'] . "</p>";
             include("./client/answers.php");
             ?>
             <form action="./server/request.php" method="post">
@@ -23,7 +23,7 @@
             $categoryQuery = "select category from category where id='$cid'";
             $categoryResult = $conn->query($categoryQuery);
             $categoryRow = $categoryResult->fetch_assoc();
-            echo "<h1>" . ucfirst($categoryRow['category']) . "</h1>";
+            echo "<h1 class='heading'>" . ucfirst($categoryRow['category']) . "</h1>";
 
             $query = "select * from questions where category_id='$cid' and id!='$qid'";
             $result = $conn->query($query);
@@ -32,7 +32,7 @@
                 $title = $row['title'];
                 $id = $row['id'];
                 echo "<div class='questionList'>
-                <h4><a href='?q-id=$id'>$title</a></h4>
+                <h4><a class='whiteText' href='?q-id=$id'>$title</a></h4>
                 </div>";
             }
             ?>

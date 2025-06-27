@@ -1,16 +1,16 @@
-<div class="container">
+<div class="container main">
     <h1 class="heading">Ask Questions</h1>
     <form action="/Discuss_Project/server/request.php" method="post">
         <div class="col-6 offset-sm-3 margin-bottom-15">
-            <label for="title" class="form-label">Title</label>
+            <label for="title" class="form-label whiteText">Title</label>
             <input type="text" name="title" id="title" class="form-control" />
         </div>
         <div class="col-6 offset-sm-3 margin-bottom-15">
-            <label for="desc" class="form-label">Description</label>
+            <label for="desc" class="form-label whiteText">Description</label>
             <textarea type="text" name="desc" id="desc" class="form-control"></textarea>
         </div>
         <div class="col-6 offset-sm-3 margin-bottom-15">
-            <label for="category" class="form-label">Category</label>
+            <label for="category" class="form-label whiteText">Category</label>
             <?php
             include("./client/category.php");
             ?>

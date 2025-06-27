@@ -1,5 +1,4 @@
-<nav
-    class="navbar navbar-expand-sm navbar-light bg-light">
+<nav class="navbar navbar-expand-sm">
     <div class="container">
         <a class="navbar-brand" href="./">
             <img src="/discuss_project/public/logo.png" alt="#img" width="180" srcset="">
@@ -40,7 +39,7 @@
         </div>
         <form class="d-flex" role="search">
             <input class="form-control me-2" name="search" type="search" placeholder="Search Questions" />
-            <button class="btn btn-outline-success" type="submit">Search</button>
+            <button class="btn btn-outline-primary" type="submit">Search</button>
         </form>
     </div>
 </nav>

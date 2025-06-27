@@ -69,7 +69,7 @@ if (isset($_POST['signup'])) {
     $question_id = $_POST['question_id'];
     $user_id = $_SESSION["user"]["user_id"];
 
-    $query = $conn->prepare("Insert into `answers`
+    $query = $conn->prepare("INSERT into `answers`
     (`id`,`answer`,`question_id`,`user_id`) VALUES
     (Null, '$answer','$question_id','$user_id');");
     $result = $query->execute();

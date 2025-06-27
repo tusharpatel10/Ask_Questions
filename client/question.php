@@ -1,4 +1,4 @@
-<div class="container">
+<div class="container ">
     <div class="row">
         <div class="col-8">
             <h1 class="heading">Questions</h1>
@@ -20,13 +20,13 @@
                 $title = $row['title'];
                 $id = $row['id'];
                 echo "<div class='row questionList'>
-        <h4 class='question'><a href='?q-id=$id'>$title</a>";
-                echo $id ? "<a href='./server/request.php?delete=$id'>Delete</a>" : NULL;
+        <h4 class='question'><a class='link' href='?q-id=$id'>$title</a>";
+                echo $id ? "<a  href='./server/request.php?delete=$id'><i class='fa-solid fa-xmark delete'></i></a>" : NULL;
                 echo "</h4></div>";
             }
             ?>
         </div>
-        <div class="col-4">
+        <div class="col-4 main">
             <?php
             include("./client/categoryList.php");
             ?>

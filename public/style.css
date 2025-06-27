@@ -1,9 +1,47 @@
-a {
+body {
+  background: var(--upright-color);
+  background-repeat: no-repeat;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  height: auto;
+}
+
+:root {
+  --upright-color: linear-gradient(116deg,#041c3c,#143061);
+  --downright-color: linear-gradient(116deg,#143061,#041c3c);
+  --main-color: #001f3f;
+  --header-text: #6bb5f2;
+  --main-text: #3c8ca4;
+  --white-text: #fff;
+  --content: #285b84;
+}
+
+.main {
+  height: 100vh;
+}
+
+.navbar {
+  background-color: var(--bg-color);
+}
+
+.navbar a {
+  font-weight: 700;
   color: skyblue !important;
+  transition: 0.3s ease-in-out;
+}
+
+.navbar a:hover {
+  color: var(--header-text) !important;
+  transform: scale(1.1);
+  font-weight: 700;
 }
 
 .heading {
   text-align: center;
+  color: var(--main-text);
+  margin-top: 15px;
 }
 
 .margin-bottom-15 {
@@ -11,9 +49,18 @@ a {
 }
 
 .questionList {
-  border: 2px solid #bbb;
+  color: var(--white-text);
+  border: 1px solid #bbb;
+  border-radius: 8px;
   padding: 10px;
   margin: 10px;
+  transition: 0.3s ease-in-out;
+}
+
+.questionList:hover {
+  background-color: var(--main-color) !important;
+  transform: scale(1.02);
+  cursor: pointer;
 }
 
 .questionList h4 {
@@ -21,10 +68,10 @@ a {
   padding: 0;
 }
 
-.questionList a, .questionTitle {
+.questionList .link, .questionTitle {
   font-size: 20px;
   text-decoration: none;
-  color: #1c7194 !important;
+  color: var(--white-text) !important;
 }
 
 .answerWrapper {
@@ -32,7 +79,33 @@ a {
   margin-bottom: 10px;
   padding: 3px;
 }
-.question{
+
+.question {
   display: flex;
   justify-content: space-between;
+}
+
+.questionList .question h4 {
+  color: var(--header-text);
+}
+
+.description p {
+  color: #fff !important;
+}
+
+.whiteText {
+  color: var(--white-text) !important;
+  text-decoration: none;
+}
+
+.delete {
+  size: 15px;
+  color: var(--content) !important;
+  text-decoration: none;
+  transition: 0.3s ease-in-out;
+}
+
+.delete:hover {
+  color: var(--white-text) !important;
+  transform: scale(1.1);
 }

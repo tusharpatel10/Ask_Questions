@@ -1,5 +1,5 @@
 <div class="container">
-    <h5>Answers:</h5>
+    <h5 class="whiteText">Answers :</h5>
     <div class="offset-sm-1">
         <?php
         $query = "select * from answers where question_id='$qid'";
@@ -7,7 +7,7 @@
         foreach ($result as $row) {
             $answers = $row['answer'];
             echo "<div class='row'>
-        <p class='answerWrapper'>$answers</p>
+        <p class='answerWrapper whiteText'>$answers</p>
         </div>";
         }
         ?>
